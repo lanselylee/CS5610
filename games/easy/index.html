@@ -1,12 +1,13 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Sudokool — Easy (6×6)</title>
-  <link rel="stylesheet" href="../../css/common.css" />
+  <link rel="stylesheet" href="../../css/common.css">
 </head>
 <body>
+  <!-- Navigation -->
   <header class="navbar">
     <div class="inner">
       <div class="brand">Sudokool</div>
@@ -23,22 +24,69 @@
     </div>
   </header>
 
+  <!-- Main Content -->
   <main class="container">
     <h1 class="h1">Easy — 6×6</h1>
-    <div class="card" style="max-width:520px">
-      <p><strong>Timer:</strong> <span class="timer">03:21</span></p>
+    
+    <!-- Game Info -->
+    <div class="card" style="max-width: 520px">
+      <p>
+        <strong>Timer:</strong> 
+        <span class="timer">03:21</span>
+      </p>
       <p class="muted">Type 1–6 in the cells. Static mock only.</p>
     </div>
 
-    <div class="card" style="margin-top:1rem; max-width:520px">
+    <!-- Sudoku Grid -->
+    <div class="card" style="margin-top: 1rem; max-width: 520px">
       <div class="grid grid-6" id="board6">
-        <!-- 6×6  -->
-        <div class="cell"><input type="number" min="1" max="6" placeholder="·"></div><div class="cell"><input type="number" min="1" max="6" placeholder="·"></div><div class="cell"><input type="number" min="1" max="6" placeholder="·"></div><div class="cell"><input type="number" min="1" max="6" placeholder="·"></div><div class="cell"><input type="number" min="1" max="6" placeholder="·"></div><div class="cell"><input type="number" min="1" max="6" placeholder="·"></div>
-        <div class="cell"><input type="number" min="1" max="6" placeholder="·"></div><div class="cell"><input type="number" min="1" max="6" placeholder="·"></div><div class="cell"><input type="number" min="1" max="6" placeholder="·"></div><div class="cell"><input type="number" min="1" max="6" placeholder="·"></div><div class="cell"><input type="number" min="1" max="6" placeholder="·"></div><div class="cell"><input type="number" min="1" max="6" placeholder="·"></div>
-        <div class="cell"><input type="number" min="1" max="6" placeholder="·"></div><div class="cell"><input type="number" min="1" max="6" placeholder="·"></div><div class="cell"><input type="number" min="1" max="6" placeholder="·"></div><div class="cell"><input type="number" min="1" max="6" placeholder="·"></div><div class="cell"><input type="number" min="1" max="6" placeholder="·"></div><div class="cell"><input type="number" min="1" max="6" placeholder="·"></div>
-        <div class="cell"><input type="number" min="1" max="6" placeholder="·"></div><div class="cell"><input type="number" min="1" max="6" placeholder="·"></div><div class="cell"><input type="number" min="1" max="6" placeholder="·"></div><div class="cell"><input type="number" min="1" max="6" placeholder="·"></div><div class="cell"><input type="number" min="1" max="6" placeholder="·"></div><div class="cell"><input type="number" min="1" max="6" placeholder="·"></div>
-        <div class="cell"><input type="number" min="1" max="6" placeholder="·"></div><div class="cell"><input type="number" min="1" max="6" placeholder="·"></div><div class="cell"><input type="number" min="1" max="6" placeholder="·"></div><div class="cell"><input type="number" min="1" max="6" placeholder="·"></div><div class="cell"><input type="number" min="1" max="6" placeholder="·"></div><div class="cell"><input type="number" min="1" max="6" placeholder="·"></div>
-        <div class="cell"><input type="number" min="1" max="6" placeholder="·"></div><div class="cell"><input type="number" min="1" max="6" placeholder="·"></div><div class="cell"><input type="number" min="1" max="6" placeholder="·"></div><div class="cell"><input type="number" min="1" max="6" placeholder="·"></div><div class="cell"><input type="number" min="1" max="6" placeholder="·"></div><div class="cell"><input type="number" min="1" max="6" placeholder="·"></div>
+        <!-- Row 1 -->
+        <div class="cell"><input type="number" min="1" max="6" placeholder="·"></div>
+        <div class="cell"><input type="number" min="1" max="6" placeholder="·"></div>
+        <div class="cell"><input type="number" min="1" max="6" placeholder="·"></div>
+        <div class="cell"><input type="number" min="1" max="6" placeholder="·"></div>
+        <div class="cell"><input type="number" min="1" max="6" placeholder="·"></div>
+        <div class="cell"><input type="number" min="1" max="6" placeholder="·"></div>
+
+        <!-- Row 2 -->
+        <div class="cell"><input type="number" min="1" max="6" placeholder="·"></div>
+        <div class="cell"><input type="number" min="1" max="6" placeholder="·"></div>
+        <div class="cell"><input type="number" min="1" max="6" placeholder="·"></div>
+        <div class="cell"><input type="number" min="1" max="6" placeholder="·"></div>
+        <div class="cell"><input type="number" min="1" max="6" placeholder="·"></div>
+        <div class="cell"><input type="number" min="1" max="6" placeholder="·"></div>
+
+        <!-- Row 3 -->
+        <div class="cell"><input type="number" min="1" max="6" placeholder="·"></div>
+        <div class="cell"><input type="number" min="1" max="6" placeholder="·"></div>
+        <div class="cell"><input type="number" min="1" max="6" placeholder="·"></div>
+        <div class="cell"><input type="number" min="1" max="6" placeholder="·"></div>
+        <div class="cell"><input type="number" min="1" max="6" placeholder="·"></div>
+        <div class="cell"><input type="number" min="1" max="6" placeholder="·"></div>
+
+        <!-- Row 4 -->
+        <div class="cell"><input type="number" min="1" max="6" placeholder="·"></div>
+        <div class="cell"><input type="number" min="1" max="6" placeholder="·"></div>
+        <div class="cell"><input type="number" min="1" max="6" placeholder="·"></div>
+        <div class="cell"><input type="number" min="1" max="6" placeholder="·"></div>
+        <div class="cell"><input type="number" min="1" max="6" placeholder="·"></div>
+        <div class="cell"><input type="number" min="1" max="6" placeholder="·"></div>
+
+        <!-- Row 5 -->
+        <div class="cell"><input type="number" min="1" max="6" placeholder="·"></div>
+        <div class="cell"><input type="number" min="1" max="6" placeholder="·"></div>
+        <div class="cell"><input type="number" min="1" max="6" placeholder="·"></div>
+        <div class="cell"><input type="number" min="1" max="6" placeholder="·"></div>
+        <div class="cell"><input type="number" min="1" max="6" placeholder="·"></div>
+        <div class="cell"><input type="number" min="1" max="6" placeholder="·"></div>
+
+        <!-- Row 6 -->
+        <div class="cell"><input type="number" min="1" max="6" placeholder="·"></div>
+        <div class="cell"><input type="number" min="1" max="6" placeholder="·"></div>
+        <div class="cell"><input type="number" min="1" max="6" placeholder="·"></div>
+        <div class="cell"><input type="number" min="1" max="6" placeholder="·"></div>
+        <div class="cell"><input type="number" min="1" max="6" placeholder="·"></div>
+        <div class="cell"><input type="number" min="1" max="6" placeholder="·"></div>
       </div>
     </div>
   </main>
