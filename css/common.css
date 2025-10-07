@@ -1,0 +1,129 @@
+:root{
+    --bg:#0f1220; --panel:#171a2a; --text:#e8ebff; --muted:#9aa3c7;
+    --brand:#6c8cff; --brand2:#56e0cb; --border:#2a2f45; --radius:16px;
+  }
+  *{box-sizing:border-box}
+  html,body{height:100%}
+  body{
+    margin:0; font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;
+    background:var(--bg); color:var(--text); line-height:1.5;
+  }
+  .container{max-width:1100px; margin:0 auto; padding:1rem}
+  .h1{font-size:clamp(1.6rem,2vw + 1rem,2.4rem); margin:0 0 .5rem}
+  .muted{color:var(--muted)}
+  .card{background:var(--panel); border:1px solid var(--border); border-radius:var(--radius); padding:1rem}
+  .btn{display:inline-block; text-decoration:none; color:var(--text); padding:.6rem .9rem; border:1px solid var(--border);
+    border-radius:999px; background:#12152a; transition:transform .15s, box-shadow .2s, border-color .2s}
+  .btn:hover{transform:translateY(-1px); box-shadow:0 8px 18px rgba(108,140,255,.25); border-color:var(--brand)}
+  
+  .navbar{
+    position:sticky; top:0; z-index:10;
+    backdrop-filter:blur(8px);
+    background:rgba(23,26,42,.9);
+    border-bottom:1px solid var(--border);
+  }
+  .navbar .inner{display:flex; align-items:center; gap:.8rem; padding:.8rem 1rem; max-width:1100px; margin:0 auto}
+  .brand{font-weight:800; letter-spacing:.5px; text-transform:uppercase; font-size:1rem; color:var(--brand)}
+  .nav{display:flex; gap:.4rem; margin-left:auto; flex-wrap:wrap}
+  .nav a{padding:.5rem .8rem; border-radius:999px; text-decoration:none; color:var(--muted); border:1px solid transparent;
+    transition:transform .15s, background .2s, color .2s, border-color .2s}
+  .nav a:hover{transform:translateY(-1px); color:var(--text); background:rgba(108,140,255,.12); border-color:rgba(108,140,255,.25)}
+  .nav a.active{color:#0f1220; background:linear-gradient(135deg,var(--brand),var(--brand2))}
+  main{padding:calc(64px + 1.2rem) 1rem 4rem}
+  
+  /*on the phone, the navbar is at the bottom*/
+  @media (max-width:600px){
+    .navbar{position:fixed; top:auto; bottom:0; border-bottom:none; border-top:1px solid var(--border)}
+    main{padding:1rem 1rem 84px}
+  }
+  /* ===== 6×6 grid ===== */
+.grid-6{ grid-template-columns: repeat(6, minmax(36px, 1fr)); }
+
+/* 6*6 grid */
+.grid-6 .cell{ border:1px solid #1e2338; }
+.grid-6 .cell:nth-child(6n+3){ border-right:2px solid var(--brand); }
+
+
+.grid-6 .cell:nth-child(n+7):nth-child(-n+12),
+.grid-6 .cell:nth-child(n+19):nth-child(-n+24){
+  border-bottom:2px solid var(--brand);
+}
+
+@media (max-width:600px){
+  .grid-6{ grid-template-columns: repeat(6, minmax(44px, 1fr)); }
+}
+
+/* ===== Grid Layouts ===== */
+.grid{
+  display:grid; gap:0; background:var(--panel); border:1px solid var(--border);
+  border-radius:var(--radius); padding:.5rem; margin:1rem 0;
+}
+.grid-9{ grid-template-columns: repeat(9, minmax(40px, 1fr)); }
+
+/* ===== Cell Styling ===== */
+.cell{
+  aspect-ratio:1/1; display:flex; align-items:center; justify-content:center;
+  background:var(--bg); border:1px solid var(--border);
+}
+.cell input{
+  width:100%; height:100%; border:none; background:transparent;
+  text-align:center; font-size:1.2rem; font-weight:600; color:var(--text);
+  outline:none; transition:background .2s;
+}
+.cell input:focus{ background:rgba(108,140,255,.1); }
+.cell input::placeholder{ color:var(--muted); opacity:.5; }
+
+/* ===== 9×9 Grid Subgrid Borders ===== */
+.grid-9 .cell:nth-child(9n+3),
+.grid-9 .cell:nth-child(9n+6){ border-right:2px solid var(--brand); }
+.grid-9 .cell:nth-child(n+19):nth-child(-n+27),
+.grid-9 .cell:nth-child(n+46):nth-child(-n+54){ border-bottom:2px solid var(--brand); }
+
+/* ===== Form Styling ===== */
+.input{
+  width:100%; padding:.6rem; border:1px solid var(--border); border-radius:8px;
+  background:var(--bg); color:var(--text); font-size:1rem;
+  transition:border-color .2s, box-shadow .2s;
+}
+.input:focus{ outline:none; border-color:var(--brand); box-shadow:0 0 0 3px rgba(108,140,255,.1); }
+label{ display:block; margin-bottom:.3rem; font-weight:500; color:var(--text); }
+
+/* ===== Game List Styling ===== */
+.game-list{ list-style:none; padding:0; margin:0; }
+.game-list li{ margin-bottom:.5rem; }
+.game-link{
+  display:flex; justify-content:space-between; align-items:center;
+  padding:.8rem; border:1px solid var(--border); border-radius:8px;
+  text-decoration:none; color:var(--text); background:var(--bg);
+  transition:transform .15s, border-color .2s, background .2s;
+}
+.game-link:hover{
+  transform:translateY(-1px); border-color:var(--brand);
+  background:rgba(108,140,255,.05);
+}
+.game-title{ font-weight:600; }
+.game-author{ color:var(--muted); font-size:.9rem; }
+
+/* ===== Timer Styling ===== */
+.timer{
+  font-family:monospace; font-weight:600; color:var(--brand);
+  background:rgba(108,140,255,.1); padding:.2rem .4rem;
+  border-radius:4px; border:1px solid rgba(108,140,255,.2);
+}
+
+/* ===== Table Styling ===== */
+table{ border-collapse:separate; border-spacing:0; }
+th{ background:var(--bg); font-weight:600; color:var(--brand); }
+tr:hover{ background:rgba(108,140,255,.05); }
+tr:hover td{ border-color:rgba(108,140,255,.2); }
+
+/* ===== Row Layout ===== */
+.row{ display:flex; gap:1rem; flex-wrap:wrap; }
+
+/* ===== Mobile Responsive ===== */
+@media (max-width:600px){
+  .grid-9{ grid-template-columns: repeat(9, minmax(32px, 1fr)); }
+  .cell input{ font-size:1rem; }
+  .game-link{ flex-direction:column; align-items:flex-start; gap:.3rem; }
+  .row{ flex-direction:column; }
+}
