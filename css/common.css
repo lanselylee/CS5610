@@ -31,11 +31,13 @@ body {
 }
 
 body {
+  
   margin: 0;
-  font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
   background: var(--bg);
   color: var(--text);
   line-height: 1.5;
+
+  
 }
 
 .container {
@@ -147,7 +149,7 @@ main {
   }
 
   main {
-    padding: 1rem 1rem 120px; /* 原本是 84px，改成 120px 给更多空间 */
+    padding: 1rem 1rem 120px; 
   }
 }
 
@@ -337,21 +339,46 @@ tr:hover td {
 
 /* ===== Additional Mobile Responsive ===== */
 @media (max-width: 600px) {
-  .grid-9 {
-    grid-template-columns: repeat(9, minmax(32px, 1fr));
-  }
-  
-  .cell input {
-    font-size: 1rem;
-  }
-  
+  .grid-9 { grid-template-columns: repeat(9, minmax(32px, 1fr)); }
+  .cell input { font-size: 1rem; }
+
   .game-link {
     flex-direction: column;
     align-items: flex-start;
     gap: 0.3rem;
   }
-  
-  .row {
-    flex-direction: column;
+
+  .row { flex-direction: column; }
+}
+
+/* ===== Collapsible Navbar Toggle (Mobile only) ===== */
+@media (max-width: 600px) {
+ 
+  .nav-toggle-btn {
+    position: fixed;
+    bottom: 80px;             
+    right: 1rem;
+    background: linear-gradient(135deg, var(--brand), var(--brand2));
+    color: #fff;
+    padding: 0.4rem 0.8rem;
+    border-radius: 999px;
+    font-size: 0.85rem;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    z-index: 999;
+    transition: opacity .3s, transform .2s;
+  }
+
+
+  .nav-toggle-btn .when-closed { display: none; }
+  #nav-compact:checked ~ .nav-toggle-btn .when-open { display: none; }
+  #nav-compact:checked ~ .nav-toggle-btn .when-closed { display: inline; }
+
+
+  header.navbar { transition: transform .3s ease, opacity .3s ease; }
+  #nav-compact:checked ~ header.navbar {
+    transform: translateY(80%); 
+    opacity: .5;
   }
 }
+
