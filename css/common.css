@@ -142,10 +142,12 @@ main {
     bottom: 0;
     border-bottom: none;
     border-top: 1px solid var(--border);
+    background: var(--panel);
+    width: 100%;
   }
-  
+
   main {
-    padding: 1rem 1rem 84px;
+    padding: 1rem 1rem 120px; /* 原本是 84px，改成 120px 给更多空间 */
   }
 }
 
